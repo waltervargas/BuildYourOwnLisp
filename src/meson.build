@@ -1,5 +1,6 @@
 buildyourownlisp_sources = [
-  'main.c',
+  'parsing.c',
+  'mpc.c',
 ]
 
 buildyourownlisp_deps = [
@@ -7,6 +8,6 @@ buildyourownlisp_deps = [
 ]
 
 executable('buildyourownlisp', buildyourownlisp_sources,
-  dependencies: buildyourownlisp_deps,
+  dependencies: [ buildyourownlisp_deps, readline_dep],
   install: true,
 )
